@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Joke API Test</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header container row">
+        <div class="col-sm-6 col-12">
+          <button id="btn_genRandomJoke">Get A New Random Joke</button>
+        </div>
+        <div class="col-sm-6 col-12">
+          <a
+            id="apiLink"
+            href="https://karljoke.herokuapp.com/"
+            style="float: right; margin: 10px"
+            >View API Docs</a
+          >
+        </div>
+      </header>
+      <hr />
+      <section class="section">
+        <p id="loading" class="info">LOADING YOUR JOKE...</p>
+        <p id="error" class="error">THERE WAS AN ERROR LOADING YOUR JOKE.</p>
+        <div id="main">
+          <div id="div_joke" style="position: relative">
+            <span class="BigDoubleQuotation leftQuotation">&#8220;</span>
+            <p id="text_joke"></p>
+          </div>
+
+          <div class="center">
+            <button id="btn_controlPunchline" class="blue" type="button">
+              Show Punchline
+            </button>
+          </div>
+          <div id="div_punchline" style="position: relative">
+            <span class="BigDoubleQuotation rightQuotation">&#8221;</span>
+            <p id="text_punchline"></p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
